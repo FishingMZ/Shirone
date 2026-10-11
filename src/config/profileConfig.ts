@@ -6,26 +6,36 @@ import { withUserConfig } from "../utils/config-overlay.ts";
  * 类型见 src/types/config.ts。
  */
 export const profileConfig: ProfileConfig = withUserConfig("profile", {
-	avatar: "assets/images/demo-avatar.webp", // Relative to the /src directory. Relative to the /public directory if it starts with '/'
-	name: "Shirone",
-	bio: "The rain remembers what the sky forgot to say.",
+	avatar: "assets/images/kai_lu.webp", // Relative to the /src directory. Relative to the /public directory if it starts with '/'
+	name: "Fishing_MZ",
+	bio: "Ciallo～ (∠・ω< )⌒★",
 	links: [
 		{
-			name: "X",
-			icon: "fa7-brands:x-twitter", // Visit https://icones.js.org/ for icon codes
+			name: "Bilibili",
+			icon: "fa7-brands:bilibili", // Visit https://icones.js.org/ for icon codes
 			// You will need to install the corresponding icon set if it's not already included
 			// `pnpm add @iconify-json/<icon-set-name>`
-			url: "https://x.com",
-		},
-		{
-			name: "Steam",
-			icon: "fa7-brands:steam",
-			url: "https://store.steampowered.com",
+			url: "https://space.bilibili.com/1115221489",
 		},
 		{
 			name: "GitHub",
 			icon: "fa7-brands:github",
-			url: "https://github.com/LyraVoid/Shirone",
+			url: "https://github.com/FishingMZ",
+		},
+		{
+			name: "Steam",
+			icon: "fa7-brands:steam",
+			url: "https://steamcommunity.com/profiles/76561199527856741",
+		},
+		{
+			name: "Discord",
+			icon: "fa7-brands:discord",
+			url: "https://discord.gg/dCGvnTtpHN",
+		},
+ 		{
+			name: "Telegram",
+			icon: "fa7-brands:telegram",
+			url: "https://t.me/fishingxxxx",
 		},
 	],
 });
