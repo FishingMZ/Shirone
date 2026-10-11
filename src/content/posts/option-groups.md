@@ -1,5 +1,6 @@
 ---
 title: "Markdown 选项组"
+published: 2026-08-28
 description: "在紧凑、同步的 M3E 选项组中呈现相关的 Markdown 替代方案。"
 tags: [Demo, Markdown, Tabs, Shirone]
 category: Guides
