@@ -16,7 +16,7 @@ export const siteConfig: SiteConfig = withUserConfig("site", {
 	subtitle: "Shirone",
 	// 电脑端顶栏标题与导航内容区域："left" 左对齐，"center" 居中。
 	topAppBar: {
-		contentAlign: "left",
+		contentAlign: "center",
 	},
 	// 显示设置面板控制：配置各项前端切换项的可见性（默认全部开启）。
 	displaySettings: {
