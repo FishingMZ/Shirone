@@ -1,8 +1,8 @@
 ---
-title: Shirone Markdown Enhancements
+title: Shirone Markdown 增强功能
 published: 2026-08-19
 pinned: true
-description: Explore Shirone's custom Markdown extensions, expressive components, and authoring syntax.
+description: 探索 Shirone 的自定义 Markdown 扩展、表现力组件和创作语法。
 tags: [Demo, Markdown, Extensions, Theme, Shirone]
 series: markdown-syntax-guide
 seriesOrder: 3
@@ -11,15 +11,15 @@ lang: en
 draft: false
 ---
 
-Shirone provides a collection of theme-exclusive Markdown extensions and custom syntax containers. Built on top of our native unified AST processing pipeline, all extensions render into accessible, semantic HTML during site build time with **zero client JavaScript hydration overhead** and **100% M3E design token alignment**.
+Shirone 提供了一系列主题专属的 Markdown 扩展和自定义语法容器。它们构建在我们原生的统一 AST 处理管道之上，所有扩展在站点构建时都会渲染为无障碍的语义化 HTML，具有**零客户端 JavaScript 水合开销**和**100% M3E 设计令牌对齐**。
 
-## File Trees
+## 文件树
 
-File Trees turn multi-level project structures, source hierarchies, and terminal directory outputs into compact, interactive tree views with automatic extension icons, diff highlighting, and collapsible branches.
+文件树将多级项目结构、源代码层级和终端目录输出转换为紧凑、可交互的树形视图，具有自动扩展名图标、差异高亮和可折叠分支。
 
-### 1. Nested List Syntax (`:::file-tree`)
+### 1. 嵌套列表语法（`:::file-tree`）
 
-Use the `:::file-tree` block directive when writing the file hierarchy directly as a Markdown nested list.
+当直接将文件层级写为 Markdown 嵌套列表时，使用 `:::file-tree` 块指令。
 
 ```markdown
 :::file-tree{title="Shirone source tree"}
@@ -45,11 +45,11 @@ Use the `:::file-tree` block directive when writing the file hierarchy directly 
 :::
 ```
 
-:::file-tree{title="Shirone source tree"}
+:::file-tree{title="Shirone 源代码树"}
 - src
   - components/
-    - ++ Navigation.svelte # added component
-    - -- Button.astro # removed component
+    - ++ Navigation.svelte # 添加的组件
+    - -- Button.astro # 移除的组件
   - content
     - posts/
       - markdown-enhancements.md
@@ -61,24 +61,24 @@ Use the `:::file-tree` block directive when writing the file hierarchy directly 
   - styles
     - markdown/
       - trees.css
-  - **content.config.ts** # important file
+  - **content.config.ts** # 重要文件
 - public/
   - favicon.svg
 - package.json
 :::
 
-#### Authoring Rules & Markers
+#### 创作规则与标记
 
-- **Diff States**: Prefix an item with `++` (green background & badge) or `--` (red background & strikethrough) to highlight changes.
-- **Comments**: Any text following a `#` is rendered as a muted, right-aligned inline comment.
-- **Emphasis**: Wrap names in `**bold**` to give key files prominent visual weight.
-- **Collapsible Folders**: Directories inferred from nested list items start expanded by default. Add a trailing slash (e.g. `components/`) to create a collapsed directory that readers can expand on click or via keyboard navigation.
+- **差异状态**：在项目前加上 `++`（绿色背景和徽章）或 `--`（红色背景和删除线）以高亮更改。
+- **注释**：`#` 之后的任何文本都会渲染为静默的、右对齐的行内注释。
+- **强调**：将名称包裹在 `**粗体**` 中，以赋予关键文件突出的视觉权重。
+- **可折叠文件夹**：从嵌套列表项推断出的目录默认展开。添加尾部斜杠（例如 `components/`）可创建折叠目录，读者可以通过点击或键盘导航展开。
 
 ---
 
-### 2. Terminal Output Syntax (```` ```file-tree ````)
+### 2. 终端输出语法（```` ```file-tree ````）
 
-When you already have directory tree text generated from command-line tools like `tree`, paste it directly into a `file-tree` fenced code block. Both Unicode branch characters (`├──`, `└──`, `│`) and ASCII branches are automatically parsed.
+当您已有由 `tree` 等命令行工具生成的目录树文本时，直接将其粘贴到 `file-tree` 围栏代码块中。Unicode 分支字符（`├──`、`└──`、`│`）和 ASCII 分支都会自动解析。
 
 ````markdown
 ```file-tree title="Build output" icon="simple"
@@ -98,20 +98,20 @@ dist
 └── favicon.ico
 ```
 
-#### Configuration Options
+#### 配置选项
 
-- `title="string"`: Sets a custom header title and accessible label for the tree.
-- `icon="colored" | "simple"`: Choose between multi-color extension icons (`colored`, default) or minimal monochrome icons (`simple`).
+- `title="string"`：为树设置自定义标题和可访问标签。
+- `icon="colored" | "simple"`：在多色扩展名图标（`colored`，默认）或极简单色图标（`simple`）之间选择。
 
 ---
 
-## Code Trees
+## 代码树
 
-Interactive Code Trees pair a multi-level file hierarchy navigation pane on the left with instant code panel switching on the right. They provide an IDE-like reading experience for multi-file examples, modules, or whole directory walk-throughs.
+交互式代码树将左侧的多级文件层级导航窗格与右侧的即时代码面板切换配对。它们为多文件示例、模块或整个目录的走查提供类似 IDE 的阅读体验。
 
-### 1. Container Syntax (`:::code-tree`)
+### 1. 容器语法（`:::code-tree`）
 
-Combine multiple fenced code blocks within a `:::code-tree` block directive. Each code block specifies its path via `title="path/to/file"`.
+在 `:::code-tree` 块指令中组合多个围栏代码块。每个代码块通过 `title="path/to/file"` 指定其路径。
 
 ````markdown
 :::code-tree{title="Shirone Component Demo" height="380px" entry="src/Button.svelte"}
@@ -139,7 +139,7 @@ Combine multiple fenced code blocks within a `:::code-tree` block directive. Eac
 :::
 ````
 
-:::code-tree{title="Shirone Component Demo" height="380px" entry="src/Button.svelte"}
+:::code-tree{title="Shirone 组件演示" height="380px" entry="src/Button.svelte"}
 ```svelte title="src/Button.svelte"
 <script lang="ts">
   let { label = "Click me" } = $props();
@@ -163,23 +163,24 @@ Combine multiple fenced code blocks within a `:::code-tree` block directive. Eac
 ```
 :::
 
-#### Configuration & Markers
+#### 配置与标记
 
-- `title="string"`: Sets the header title and accessible label for the code tree.
-- `height="string"`: Sets the height for the desktop view (default `420px`, e.g. `380px`, `26rem`).
-- `entry="filepath"`: Specifies which file is active upon first load.
-- `icon="colored" | "simple"`: Switch between colorful or minimal monochrome file icons.
-- `:active`: Place `:active` on any fenced code block to designate it as the default active tab.
+- `title="string"`：设置代码树的标题和可访问标签。
+- `height="string"`：设置桌面视图的高度（默认 `420px`，例如 `380px`、`26rem`）。
+- `entry="filepath"`：指定首次加载时处于活动状态的文件。
+- `icon="colored" | "simple"`：在彩色或极简单色文件图标之间切换。
+- `:active`：将 `:active` 放在任何围栏代码块上，以将其指定为默认活动标签页。
 
 ---
 
-### 2. Local Directory Auto-Import (`@[code-tree]`)
+### 2. 本地目录自动导入（`@[code-tree]`）
 
-Point directly to any local directory path in the workspace to automatically scan and generate an interactive code tree at build time without manually copying file contents.
+直接指向工作区中的任何本地目录路径，以在构建时自动扫描并生成交互式代码树，而无需手动复制文件内容。
 
 ```markdown
 @[code-tree title="Anime Utilities" entry="status.ts"](/src/utils/anime)
 ```
 
-@[code-tree title="Site Configuration" entry="siteConfig.ts"](/src/config)
+@[code-tree title="动漫工具" entry="status.ts"](/src/utils/anime)
 
+@[code-tree title="站点配置" entry="siteConfig.ts"](/src/config)
