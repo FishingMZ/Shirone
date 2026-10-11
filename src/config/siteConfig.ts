@@ -10,13 +10,13 @@ import { withUserConfig } from "../utils/config-overlay.ts";
  * 类型见 src/types/config.ts。
  */
 export const siteConfig: SiteConfig = withUserConfig("site", {
-	site: "https://shirone.mysqil.com/",
+	site: "https://fmz.us.ci/",
 	base: "/",
-	title: "Shirone",
-	subtitle: "A Material 3 anime blog",
+	title: "Fishing's Blog",
+	subtitle: "Shirone",
 	// 电脑端顶栏标题与导航内容区域："left" 左对齐，"center" 居中。
 	topAppBar: {
-		contentAlign: "center",
+		contentAlign: "left",
 	},
 	// 显示设置面板控制：配置各项前端切换项的可见性（默认全部开启）。
 	displaySettings: {
@@ -27,7 +27,7 @@ export const siteConfig: SiteConfig = withUserConfig("site", {
 		reduceMotion: true, // 是否展示减少动效切换
 		texture: true, // 是否展示背景纹理选择
 	},
-	lang: "en", // Language code, e.g. 'en', 'zh_CN', 'ja', etc.
+	lang: "zh_CN", // Language code, e.g. 'en', 'zh_CN', 'ja', etc.
 	// IANA time zone for precise post and moment timestamps. It is independent of lang.
 	timeZone: "Asia/Shanghai",
 	themeColor: {
@@ -57,8 +57,21 @@ export const siteConfig: SiteConfig = withUserConfig("site", {
 		// desktop 用于 >= 1024px；mobile 仅用于 < 1024px 的首页，手机非首页不显示壁纸。
 		// 数组顺序就是轮播顺序；只需要静态 Banner 时，每组保留一张图片即可。
 		src: {
-			desktop: ["assets/images/banner/desktop/1.webp"],
-			mobile: ["assets/images/banner/mobile/1.webp"],
+			desktop: [
+				"assets/images/banner/desktop/124177.webp",
+				"assets/images/banner/desktop/139649.webp",
+				"assets/images/banner/desktop/201747.webp",
+				"assets/images/banner/desktop/355983.webp",
+				"assets/images/banner/desktop/650142.webp",
+				"assets/images/banner/desktop/949156.webp",
+				"assets/images/banner/desktop/977111.webp",
+			],
+			mobile: [
+				"assets/images/banner/mobile/153160.webp",
+				"assets/images/banner/mobile/471992.webp",
+				"assets/images/banner/mobile/525406.webp",
+				"assets/images/banner/mobile/687678.webp",
+			],
 		},
 		// 图片裁切焦点："top"、"center" 或 "bottom"。
 		position: "center",
@@ -72,11 +85,12 @@ export const siteConfig: SiteConfig = withUserConfig("site", {
 			enable: true,
 			title: "Shirone",
 			subtitle: [
-				"特別なことはないけど、君がいると十分です",
-				"今でもあなたは私の光",
-				"君ってさ、知らないうちに私の毎日になってたよ",
-				"君と話すと、なんか毎日がちょっと楽しくなるんだ",
-				"今日はなんでもない日。でも、ちょっとだけいい日",
+				"🐟🐟🐟鱼神の神秘打野点🏠🏠🏠",
+				"「与你的日常，就是奇迹」",
+				"落尽红樱君不见，轻绘梨花泪沾衣",
+				"乌兰巴托在下雨，蒙古别为我哭泣",
+				"我差一点就碰到星星了，只是后来天亮了",
+				"人总是执着于第一眼就喜欢的东西",
 			],
 			typewriter: {
 				// 副标题逐字显示；关闭后直接显示完整副标题。
