@@ -1,24 +1,24 @@
 ---
-title: Markdown Abbreviations
+title: Markdown 缩写
 published: 2026-08-28
-description: Define common acronyms once and keep their full meaning available in normal article text.
+description: 只需定义一次常见缩写词，即可在普通文章文本中保留其完整含义。
 tags: [Demo, Markdown, Typography, Shirone]
 category: Guides
 lang: en
 draft: false
 ---
 
-Abbreviations keep technical writing compact while preserving the full term for readers who need it. A defined term renders as a native `abbr` element with its meaning available on hover and to assistive technology.
+缩写使技术写作保持简洁，同时为需要了解完整术语的读者保留其全称。已定义的术语会渲染为原生 `abbr` 元素，其含义可在悬停时查看，也可供辅助技术读取。
 
-## In context
+## 在上下文中
 
-SSR-first output keeps the initial document visible before JavaScript runs. When measuring its reading experience, LCP and CLS reveal whether the first visible content is fast and stable.
+SSR 优先的输出会在 JavaScript 运行之前保持初始文档可见。在衡量其阅读体验时，LCP 和 CLS 会揭示首个可见内容是否快速且稳定。
 
-An abbreviation can also appear next to ordinary Markdown such as **SSR** guidance, but literal code such as `SSR` and links like [LCP documentation](https://web.dev/articles/lcp) remain untouched.
+缩写也可以出现在普通 Markdown 旁边，例如 **SSR** 指南，但诸如 `SSR` 这样的字面代码以及像 [LCP 文档](https://web.dev/articles/lcp) 这样的链接将保持原样，不受影响。
 
-## Define terms
+## 定义术语
 
-Place definitions anywhere in the same Markdown document. They do not render as visible paragraphs, and only matching terms in that article receive the semantic abbreviation treatment.
+将定义放在同一 Markdown 文档的任意位置。它们不会渲染为可见段落，只有该文章中的匹配术语才会获得语义化的缩写处理。
 
 ```markdown
 *[SSR]: Server-Side Rendering
@@ -32,6 +32,6 @@ SSR makes an HTML response available before client code runs.
 *[LCP]: Largest Contentful Paint
 *[CLS]: Cumulative Layout Shift
 
-## Authoring boundaries
+## 创作边界
 
-Terms must begin with a letter or number and may contain letters, numbers, periods, underscores, plus signs, and hyphens. Each definition applies to the current article only; an invalid or duplicate definition remains ordinary Markdown instead of silently replacing another term.
+术语必须以字母或数字开头，并且可以包含字母、数字、句点、下划线、加号和连字符。每个定义仅适用于当前文章；无效或重复的定义将保持为普通 Markdown，而不会静默替换其他术语。
